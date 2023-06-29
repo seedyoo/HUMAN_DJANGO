@@ -53,3 +53,19 @@ def vote(request, question_id):
 
     # results.html 페이지
     return render(request, 'polls/results.html', { 'question' : question })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
