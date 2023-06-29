@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-+1*fv8!g%_bh6e-l&qk^#m&yqbztsizudp1yq4=5+!%25je4b&'
+SECRET_KEY = 'django-insecure-goj+=d4=kj@u+_s5wc_z6vc1v1h()z^_!i%z9wag_0$2abw4$d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 # Application definition
 # 애플리케이션 추가
 INSTALLED_APPS = [
-    'polls.apps.PollsConfig',       # 추가
+    'polls.apps.PollsConfig',        # 추가
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -123,3 +123,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

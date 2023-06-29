@@ -28,8 +28,8 @@ urlpatterns = [
     - view : URL 패턴과 일치하는 경우 호출하는 함수
     - name : URL 패턴에 대한 이름 정의
             * 템플릿이나 뷰에서 해당 URL 을 참조하는 이름으로 사용
-    
-    include('앱.'urls')
+            
+    include('앱.urls')
     - 하위 애플리케이션의 urls.py 파일을 등록하여, 전체 요청경로를 매핑
     
 '''
