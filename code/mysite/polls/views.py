@@ -52,6 +52,8 @@ def vote(request, question_id):
     try:
         # 선택 항목 조회
         choice_id = request.POST['choice']
+        # SELECT * FROM choice WHERER choice_id = ?
+        selected_choice = question.choice_set.get(pk=choice_id)
         # Choice 테이블에서 데이터 조회
         # request.POST['choice']  : POST 방식으로 요청된 요청변수 choice
     except (KeyError, Choice.DoesNotExist):
@@ -60,8 +62,6 @@ def vote(request, question_id):
         return render(request, 'polls/detail.html', context)
     else:
         # UPDATE choice SET votes = votes + 1 WHERER choice_id = ? 
-        # SELECT * FROM choice WHERER choice_id = ?
-        selected_choice = question.choice_set.get(pk=choice_id)
         selected_choice.votes += 1      # 투표수 1 증가
         selected_choice.save()          # 데이터 저장
         
