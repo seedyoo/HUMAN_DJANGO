@@ -12,5 +12,6 @@
     <label for="choice{{ forloop.counter }}" >{{ choice.choice_text }}</label> <br>
 {% endfor %}
 <input type="submit" value="투표하기">
+<a href="/polls/{{ question.id }}/results">결과보기</a>
 
 </form>
