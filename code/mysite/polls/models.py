@@ -7,6 +7,10 @@ from django.db import models
 # 설문
 # 질문 제목, 작성 일자
 class Question(models.Model):
+    
+    def __str__(self):
+        return self.question_text       # 관리자 페이지 목록에 출력될 이름
+    
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField("date published")
     

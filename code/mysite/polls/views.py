@@ -11,6 +11,19 @@ def index(request):
     # return HttpResponse('Hello')
     # 설문 목록을 조회
     question_list = Question.objects.all()  # Question 테이블의 전체목록
+    
+    # 투표수 합계
+    for q in question_list:
+        print( q.choice_set.all() )
+        choice_list = q.choice_set.all()
+        sum = 0
+        for c in choice_list:
+            sum = sum + c.votes
+            print(c.votes)
+        q.sum = sum
+    
+    
+    
     context = {'question_list' : question_list}
     return render(request, 'polls/index.html', context)
 
