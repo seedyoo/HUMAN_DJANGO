@@ -1,7 +1,9 @@
 <h1>form 양식 만들기</h1>
 
-<form action="" method="post">
+<form action="/myapp/" method="post">
     {% csrf_token %}
     {{ form }}
+    <!-- <label for="age">나이 : </label> -->
+    <!-- <input type="number" name="age" > -->
     <input type="submit" value="등록">
 </form>
