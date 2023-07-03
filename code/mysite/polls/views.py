@@ -74,9 +74,13 @@ def vote(request, question_id):
         # 투표 결과 화면으로 이동
         # polls/10/results 경로로, results, args=경로속성값을 반대로 매핑하여 출력
         return HttpResponseRedirect( reverse('polls:results', args=(question.id, ) ) )
+        # HttpResponseRedirect( '재요청할 url' )
+        #   - HttpResponseRedirect( 'polls/10/results' )
+        # reverse( '경로 패턴', args=튜플 )
+        # reverse( '앱이름:경로이름', args=튜플 )
+        # - args : 경로에 매핑할 변수를 *튜플* 지정
 
-    # reverse( '경로 패턴', args=튜플 )
-    # - args : 경로에 매핑할 변수를 튜플 지정
+        
 
 # 리스트  []
 # 튜플    ()
