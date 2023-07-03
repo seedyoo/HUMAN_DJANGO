@@ -8,8 +8,13 @@
 {% endcomment %}
 <form action="/myapp/" method="post">
     {% csrf_token %}
-    {{ form }}
-    <!-- <label for="age">나이 : </label> -->
-    <!-- <input type="number" name="age" > -->
+    {% comment %}
+        {{ form }}
+        {{ form.as_p }}         : <p> 태그로 감싸서 렌더링
+        {{ form.as_ul }}        : <ul>, <li> 태그로 감싸서 렌더링
+        {{ form.as_table }}     : <table> 태그로 감싸서 렌더링
+    {% endcomment %}
+
+    {{ form.as_p }}
     <input type="submit" value="등록">
 </form>

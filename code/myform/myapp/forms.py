@@ -5,7 +5,9 @@ from django import forms
 class NameForm(forms.Form):
     your_name = forms.CharField(label="이름", max_length=100)
     your_age = forms.IntegerField(label="나이", max_value=100)
-    your_info = forms.CharField(label="자기소개", max_length=200)
+    your_info = forms.CharField(label="자기소개", max_length=200
+                                , widget=forms.Textarea
+                                , required=False)
     
     
     # 화면에 렌더링 되는 코드
