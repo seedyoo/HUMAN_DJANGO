@@ -79,7 +79,7 @@ def vote(request, question_id):
         # reverse( '경로 패턴', args=튜플 )
         # reverse( '앱이름:경로이름', args=튜플 )
         # - args : 경로에 매핑할 변수를 *튜플* 지정
-
+        
         
 
 # 리스트  []
