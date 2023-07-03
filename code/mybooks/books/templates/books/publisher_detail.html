@@ -1,0 +1,13 @@
+
+<h1>{{ object.name }}</h1>
+
+<ul>
+    <li>저자 : 
+        {% for publisher in object.publishers.all %}
+            {{ publisher }}
+            {% if not forloop.last %} ,
+            {% else %}
+            {% endif %}
+        {% endfor %}
+    </li>
+</ul>
