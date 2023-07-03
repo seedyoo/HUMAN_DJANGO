@@ -24,8 +24,6 @@ def index(request):
     
     return render(request, 'myapp/index.html', context)
 
-
-
 # 결과 화면
 def results(request):
     
