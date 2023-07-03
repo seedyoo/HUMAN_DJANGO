@@ -2,7 +2,14 @@
 
 <h1>{{ question.question_text }}</h1>
 
+<!-- {% url 'polls:vote' question.id %} -->
+<!-- 
+    {% url '앱이름:경로이름' 요청변수의 값 %} 
+    {% url %} 태그는 urls.py 파일을 참조하여, 매핑한 url 경로를 출력해준다.
+    * 앱이름을 사용하려면, urls.py 파일에서 app_name 변수를 설정해야한다.
+    앱이름:경로이름  →  /polls/10/vote 
 
+-->
 <form action="{% url 'polls:vote' question.id %}" method="post">
 {% csrf_token %}
 <!-- 설문 - 답변항목 -->

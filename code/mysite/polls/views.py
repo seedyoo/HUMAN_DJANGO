@@ -41,6 +41,10 @@ def detail(request, question_id):
     #  HttpResponse 객체를 반환
     #   - 클라이언트에게 응답할 내용
     #   - 화면을 렌더링한 결과 포함
+    # get_object_or_404()
+    # - get_object_or_404( 테이블명, pk=? )
+    #   --> pk 가 ? 인 데이터를 조회
+    #   --> 데이터가 존재하지 않으면, 404 페이지로 이동(HTTP404 예외 발생)
     
     
 # 설문 선택 등록
