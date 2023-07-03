@@ -12,6 +12,13 @@
 -->
 <form action="{% url 'polls:vote' question.id %}" method="post">
 {% csrf_token %}
+<!-- 
+    Cross Site Request Forgeries
+    : 사이트간 요청 변조하는 공격
+    {% csrf_token %} : CRSF 공격을 방지하기 위한 보안 코드
+    사이트에 접속했을 때, 서버로부터 토큰을 발급받아서
+    해당 사이트에 접속한 인증된 사용자만이 요청을 할 수 있도록 함
+ -->
 <!-- 설문 - 답변항목 -->
 {% for choice in question.choice_set.all %} 
     <input type="radio" name="choice" id="choice{{ forloop.counter }}" 
