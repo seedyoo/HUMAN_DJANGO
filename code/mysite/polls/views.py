@@ -56,6 +56,8 @@ def vote(request, question_id):
     try:
         # 선택 항목 조회
         choice_id = request.POST['choice']
+        # request.POST : 요청 정보에 접근할 수 있는 딕셔너리 객체
+        # <input type="text" name="choice" /> -- > request.POST['choice']
         # SELECT * FROM choice WHERER choice_id = ?
         selected_choice = question.choice_set.get(pk=choice_id)
         # Choice 테이블에서 데이터 조회
