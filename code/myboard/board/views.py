@@ -56,6 +56,16 @@ class BoardUpdate(View):
         return redirect('/board')
         
 
+# 게시글 삭제
+class BoardDelete(View):
+    
+    # post
+    def post(self, request, pk):
+        board = get_object_or_404(Board, pk=pk)
+        
+        # 게시글 삭제
+        board.delete()
 
+        return redirect('/board')
 
 
