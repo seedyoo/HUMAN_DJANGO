@@ -16,9 +16,7 @@ urlpatterns = [
     path('insert/', views.BoardInsert.as_view(), name='board_insert'),
     
     # 게시글 수정 - '/board/update'
-    path('update/<int:pk>', views.BoardUpdate.as_view(), name='board_update'),
-    
-    
+    path('<int:pk>/update', views.BoardUpdate.as_view(), name='board_update'),
     
     
     
