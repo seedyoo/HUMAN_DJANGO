@@ -25,32 +25,22 @@ class BooksModelView(TemplateView):
         # context['model_list'] = ['Book']
         return context
     
-# 도서목록
+# 도서 목록
 class BookList(ListView):
     model = Book
-
 
 # 도서 상세
 class BookDetail(DetailView):
     model = Book
-    
-
-
-
-
-
-
-
 
 
 # 저자목록
 class AuthorList(ListView):
     model = Author
+
 # 저자 상세
 class AuthorDetail(DetailView):
     model = Author
-
-
 
 # 출판사 목록
 class PublisherList(ListView):
@@ -59,5 +49,3 @@ class PublisherList(ListView):
 # 출판사 상세
 class PublisherDetail(DetailView):
     model = Publisher
-
-

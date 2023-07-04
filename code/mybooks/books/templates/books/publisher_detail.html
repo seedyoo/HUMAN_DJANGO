@@ -1,13 +1,8 @@
 
-<h1>{{ object.name }}</h1>
+
+<h1>출판사명 : {{ object.name }}</h1>
 
 <ul>
-    <li>저자 : 
-        {% for publisher in object.publishers.all %}
-            {{ publisher }}
-            {% if not forloop.last %} ,
-            {% else %}
-            {% endif %}
-        {% endfor %}
-    </li>
+    <li>주소 : {{ object.address }}</li>
+    <li>웹사이트 : {{ object.website }}</li>
 </ul>

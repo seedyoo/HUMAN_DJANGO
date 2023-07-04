@@ -1,13 +1,8 @@
 
-<h1>{{ object.name }}</h1>
+
+<h1>저자명 : {{ object.name }}</h1>
 
 <ul>
-    <li>저자 : 
-        {% for author in object.authors.all %}
-            {{ author }}
-            {% if not forloop.last %} ,
-            {% else %}
-            {% endif %}
-        {% endfor %}
-    </li>
+    <li>인사말 : {{ object.salutation }}</li>
+    <li>이메일 : {{ object.email }}</li>
 </ul>
