@@ -1,7 +1,9 @@
-
-<h2>{{ object.title }}</h2>
-<p>
-    {{ object.content }}
-</p>
+{% extends 'base.html' %}
+{% block content %}
+    <h2>{{ object.title }}</h2>
+    <p>
+        {{ object.content }}
+    </p>
 
 <!-- 댓글 목록 -->
+{% endblock %}
